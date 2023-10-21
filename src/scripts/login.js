@@ -9,7 +9,7 @@ loginButton.addEventListener("click", async (e) => {
 
     async function authenticateUser(email, password) {
         try {
-            const response = await fetch("http://localhost:3000/users");
+            const response = await fetch("https://icarpool-api.onrender.com/users");
             console.log(response);
             if (!response.ok) {
                 throw new Error("Failed to fetch user data");
