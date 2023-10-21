@@ -317,4 +317,8 @@ label, input, button {
   margin: 5px 0;
 }
 
+main #account .profile-img {
+  width: 4em;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,9 @@
+@import "../composition/theme";
+
+main {
+    #account {
+        & .profile-img {
+            width: 4em;
+    }
+}
+}
