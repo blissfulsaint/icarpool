@@ -3,7 +3,7 @@
 main {
     flex: 1;
     transition: .2s;
-
+    // background-color: $accent1;
     #post {
         display: flex;
         justify-content: center;
@@ -43,8 +43,6 @@ main {
         width: 2em;
         margin: 0.5em;
     }
-
-
 }
 
 .dark {
