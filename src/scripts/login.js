@@ -9,12 +9,13 @@ loginButton.addEventListener("click", async (e) => {
 
     async function authenticateUser(email, password) {
         try {
-            const response = await fetch("../json/users.json");
+            const response = await fetch("http://localhost:3000/users");
+            console.log(response);
             if (!response.ok) {
                 throw new Error("Failed to fetch user data");
             }
-            const data = await response.json();
-            let users = data.users;
+            const users = await response.json();
+            console.log(users);
 
             return users.find(user => user.email === email && user.password === password);
         } catch (error) {
@@ -57,6 +58,7 @@ loginButton.addEventListener("click", async (e) => {
     const authenticatedUser = await authenticateUser(email, password);
 
     if (authenticatedUser) {
+        localStorage.setItem("isAuthenticated", true);
         window.location.href = "../account/index.html";
     } else {
         loginErrorMsg.style.opacity = 1;

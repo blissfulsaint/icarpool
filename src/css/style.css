@@ -210,7 +210,7 @@ form .button-center {
   align-items: center;
 }
 
-#login-error-msg {
+#login-error-msg, #register-error-msg {
   width: 23%;
   text-align: center;
   margin: 0;
