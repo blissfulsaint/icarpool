@@ -6,6 +6,7 @@
     <title>Home</title>
     <link rel="stylesheet" href="css/style.css">
     <script defer src="scripts/main.js" type="module"></script>
+    <script defer src="scripts/search.js"></script>
 </head>
 <body>
     <header></header>
@@ -14,21 +15,21 @@
         <section>
             <form id="searchForm">
                 <div class="flex-form">
-                    <div class="data">
+                    <div class="date">
                         <label for="date">Date:</label>
-                        <input type="text" id="Date">
+                        <input type="date" id="date" name="date">
                     </div>
                     <div class="from">
                         <label for="from">From:</label>
-                        <input type="text" id="From">
+                        <input type="text" id="from" name="from">
                     </div>
                     <div class="to">
                         <label for="to">To:</label>
-                        <input type="text" id="To">
+                        <input type="text" id="to" name="to">
                     </div>
                 </div>
                 <div class="button-center">
-                    <button type="button" onclick="search()">Search</button>
+                    <button type="submit">Search</button>
                 </div>
             </form>
         </section>

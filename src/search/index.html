@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <script defer src="../scripts/main.js" type="module"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <div id="searchPost">            
+        </div>
+    </main>
+    <footer></footer>
+    <script type="module">
+        class Post {
+            constructor (name, type, date, time, start, end, elementId) {
+                this.name = name;
+                this.type = type;
+                this.date = date;
+                this.time = time;
+                this.start = start;
+                this.end = end;
+
+                this.elementId = elementId;
+
+                this.init();
+            }
+
+            async init() {
+                const dateObject = new Date(this.date);
+
+                const dateOptions = { year: 'numeric', month: 'short', day: 'numeric' };
+
+                const formattedDate = dateObject.toLocaleDateString(undefined, dateOptions);
+
+                const timeParts = this.time.match(/T(\d{2}):(\d{2})/);
+                const hours = parseInt(timeParts[1]);
+                const minutes = parseInt(timeParts[2]);
+                const amOrPm = hours >= 12 ? 'PM' : 'AM';
+                const formattedTime = `${(hours % 12) || 12}:${minutes.toString().padStart(2, '0')} ${amOrPm}`;
+
+                let html = `<section class="card">
+                    <div class="post-user">
+                        <img class="profile-img" src="../images/placeholder.png">
+                        <p>${this.name} <span>(${this.type})</span></p>
+                    </div>
+                    <p>Date: <span>${formattedDate}, ${formattedTime}</span></p>
+                    <p>Start: <span>${this.start}</span></p>
+                    <p>End: <span>${this.end}</span></p>
+                </section>`;
+
+                document.getElementById(this.elementId).insertAdjacentHTML('beforeend', html);
+            }
+        }
+
+        const queryParams = new URLSearchParams(window.location.search);
+
+        console.log(queryParams);
+
+        let userResponse = await fetch('https://icarpool-api.onrender.com/users');
+        let users = await userResponse.json();
+
+        queryParams.forEach((value, key) => {
+            const post = JSON.parse(value);
+            console.log(post);
+
+            const postUser = users.find(user => user.id === post.userId);
+            new Post(postUser.firstName, post.type, post.startDate, post.startTime, post.startLocation, post.endLocation, "searchPost");
+        })
+
+
+    </script>
+</body>
+</html>
