@@ -317,4 +317,29 @@ label, input, button {
   margin: 5px 0;
 }
 
+main #account {
+  padding: 1em;
+}
+main #account h2 {
+  font-size: 2em;
+}
+main #account .profile-img {
+  width: 6em;
+  margin-top: 1em;
+}
+main #account p {
+  margin: 1.5em 0;
+}
+main #account #user-info {
+  display: flex;
+  gap: 0 4em;
+  flex-wrap: wrap;
+}
+main #account .user-info-item {
+  min-width: 125px;
+}
+.dark main {
+  color: white;
+}
+
 /*# sourceMappingURL=style.css.map */
