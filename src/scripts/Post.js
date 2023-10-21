@@ -25,7 +25,7 @@ export default class Post {
 
         let html = `<section class="card">
             <div class="post-user">
-                <img class="profile-img" src="./public/images/placeholder.png">
+                <img class="profile-img" src="../images/placeholder.png">
                 <p>${this.name} <span>(${this.type})</span></p>
             </div>
             <p>Date: <span>${formattedDate}, ${formattedTime}</span></p>
