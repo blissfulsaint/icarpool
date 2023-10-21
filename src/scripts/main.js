@@ -1,8 +1,9 @@
 import { loadHeaderFooter } from './utils.mjs';
 import { addLoginModalFunctions } from './modal.mjs';
 
-loadHeaderFooter();
-addLoginModalFunctions();
+loadHeaderFooter().then(() => {
+    addLoginModalFunctions();
+});
 
 
 // const parallax = document.querySelector('main');
