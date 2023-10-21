@@ -1,10 +1,25 @@
 import { loadHeaderFooter } from './utils.mjs';
 import { addLoginModalFunctions } from './modal.mjs';
+import Post from './Post';
 
 loadHeaderFooter().then(() => {
     addLoginModalFunctions();
 });
 
+async function fetchPostData() {
+  let postResponse = await fetch('https://icarpool-api.onrender.com/posts');
+  let posts = await postResponse.json();
+
+  let userResponse = await fetch('https://icarpool-api.onrender.com/users');
+  let users = await userResponse.json();
+
+  posts.forEach(post => {
+    const postUser = users.find(user => user.id === post.userId);
+    new Post(postUser.firstName, post.type, post.startDate, post.startTime, post.startLocation, post.endLocation);
+  })
+}
+
+fetchPostData();
 
 // const parallax = document.querySelector('main');
 

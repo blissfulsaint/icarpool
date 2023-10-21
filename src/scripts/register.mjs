@@ -17,7 +17,8 @@ registerButton.addEventListener("click", (e) => {
         username: null
     };
 
-    fetch('http://localhost:3000/users', {
+    // fetch('http://localhost:3000/users', {
+    fetch("https://icarpool-api.onrender.com/users", {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
