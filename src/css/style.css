@@ -146,7 +146,7 @@ main .card {
 main .card .post-user {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: #09BC8A;
+  background-color: #FFEFD3;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -165,7 +165,7 @@ main .profile-img {
 }
 
 form {
-  background-color: #EFCEFA;
+  background-color: #ADB6C4;
   height: auto;
 }
 form .flex-form {
@@ -187,7 +187,7 @@ form button {
   height: 2em;
   border: none;
   color: white;
-  background-color: #407076;
+  background-color: #005089;
   border-radius: 5px;
 }
 form .button-center {
