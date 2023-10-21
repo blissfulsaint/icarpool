@@ -23,8 +23,18 @@ main {
             min-width: 125px;
         }
 
+          button {
+            margin: 1.5em 0;
+            width: 15em;
+            height: 2em;
+            border: none;
+            color: white;
+            background-color: $primary-color;
+            border-radius: 5px;
+        }
+
         @media (min-width: 600px) {
-          }
+        }
     }
 }
 
@@ -32,4 +42,8 @@ main {
     main {
         color: white;
     }
-}
+
+    .card{
+        box-shadow: 0 0 1em gray;
+        }
+    }
