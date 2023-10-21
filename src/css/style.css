@@ -129,9 +129,72 @@ main {
   flex: 1;
   transition: 0.2s;
 }
+main #post {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+main .profile-img {
+  border-radius: 50%;
+}
+main .card {
+  margin: 1em 0 1em 0;
+  width: 90%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+main .card .post-user {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: #09BC8A;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: white;
+}
+main .card .post-user ~ p {
+  margin: 1em;
+}
+main .profile-img {
+  width: 2em;
+  margin: 0.5em;
+}
 
 .dark main {
   background-color: black;
+}
+
+form {
+  background-color: #EFCEFA;
+  height: auto;
+}
+form .flex-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: white;
+}
+form .flex-form div {
+  display: grid;
+  grid-template-columns: 5em 1fr;
+  margin-top: 1em;
+}
+form .flex-form div input {
+  border: none;
+}
+form button {
+  width: 15em;
+  height: 2em;
+  border: none;
+  color: white;
+  background-color: #407076;
+  border-radius: 5px;
+}
+form .button-center {
+  padding: 1.5em 0 1.5em 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
