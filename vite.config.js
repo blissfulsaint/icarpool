@@ -9,6 +9,9 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, 'src/index.html'),
+        account: resolve(__dirname, 'src/account/index.html'),
+        login: resolve(__dirname, 'src/account/login.html'),
+        register: resolve(__dirname, 'src/account/register.html'),
       },
     },
   },
