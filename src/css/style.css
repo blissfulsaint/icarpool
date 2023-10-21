@@ -350,6 +350,9 @@ main #account .user-info-item {
   border-radius: 5px;
   margin-top: 15vh;
 }
+#login #login-form-wrapper #login-form input {
+  margin: 0.7em auto;
+}
 #login #login-form-wrapper #login-form #login-form-submit {
   width: 35%;
 }

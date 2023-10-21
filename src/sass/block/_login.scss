@@ -1,0 +1,24 @@
+@import "../composition/theme";
+
+#login{
+    width: 90%;
+    margin: 0 5%;
+    #login-form-wrapper {
+        #login-form{
+            border-radius: 5px;
+            margin-top: 15vh;
+
+            input{
+                margin:0.7em auto;
+            }
+
+            #login-form-submit{
+                width: 35%;
+            }
+            ::placeholder{
+                color: grey;
+                opacity: 0.6;
+            }
+        }
+    }
+}
