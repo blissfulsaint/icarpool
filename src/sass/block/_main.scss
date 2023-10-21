@@ -1,1 +1,12 @@
 @import "../composition/theme";
+
+main {
+    flex: 1;
+    transition: .2s;
+}
+
+.dark {
+    main {
+        background-color: black;
+    }
+}

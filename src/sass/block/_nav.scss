@@ -1,1 +1,64 @@
 @import "../composition/theme";
+
+nav {
+    background-color: $primary-color;
+
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    @media screen and (min-width: 600px) {
+        position: sticky;
+        top: 0;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+        padding: 1em;
+
+        @media screen and (min-width: 600px) {
+            justify-content: right;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+    
+            a {
+                transition: .2s;
+                text-decoration: none;
+                color: white;
+
+                @media screen and (min-width: 600px) {
+                    display: block;
+                    padding: 1em;
+
+                    &:hover {
+                        background-color: $tertiary-color;
+                        color: $secondary-color;
+                    }
+                }
+        
+                img {
+                    width: 2.5em;
+        
+                    @media screen and (min-width: 600px) {
+                        display: none;
+                    }
+                }
+        
+                span {
+                    display: none;
+                    @media screen and (min-width: 600px) {
+                        display: block;
+                    }
+                }
+            }
+    
+        }
+
+    }
+}

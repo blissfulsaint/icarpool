@@ -1,1 +1,29 @@
 @import "../composition/theme";
+
+header {
+    background-color: $primary-color;
+
+    display: flex;
+    flex-wrap: wrap;
+    padding: .5em;
+
+    a {
+        text-decoration: none;
+    }
+
+    i.material-icons {
+        color: white;
+        font-size: 3em;
+        width: fit-content;
+        display: block;
+
+        margin: auto 0 auto auto;
+
+        transition: .2s;
+
+        &:hover {
+            cursor: pointer;
+            color: $secondary-color;
+        }
+    }
+}
