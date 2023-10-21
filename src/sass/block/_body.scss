@@ -6,6 +6,15 @@ body {
 
     height: 100vh;
 
+    .underline-link {
+        color: $accent1;
+        text-decoration: none;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
     .logo {
         width: 3em;
     }

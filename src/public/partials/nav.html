@@ -12,9 +12,27 @@
         </a>
     </li>
     <li>
-        <a href="#">
-            <img src="../images/account-02.png" alt="Account Icon">
-            <span>Account</span>
-        </a>
+        <div id="loginButtonContainer">
+            <a href="#" id="openModalBtn">
+                <img src="../images/account-02.png" alt="Account Icon">
+                <span>Login</span>
+            </a>
+        </div>
     </li>
 </ul>
+
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Login</button>
+        </form>
+        <a class="underline-link" href="../../account/register.html">Don't have an account? Register here!</a>
+    </div>
+</div>
+<script type="module" src="../scripts/modal.mjs"></script>

@@ -1,7 +1,8 @@
 import { loadHeaderFooter } from './utils.mjs';
+import { addLoginModalFunctions } from './modal.mjs';
 
 loadHeaderFooter();
-
+addLoginModalFunctions();
 
 
 // const parallax = document.querySelector('main');
@@ -12,7 +13,8 @@ loadHeaderFooter();
 // });
 
 // Select the node that will be observed for mutations
-const targetNode = document.querySelector("header");
+const headerNode = document.querySelector("header");
+const navNode = document.querySelector("nav");
 
 // Options for the observer (which mutations to observe)
 const config = { attributes: true, childList: true, subtree: true };
@@ -34,7 +36,8 @@ const callback = (mutationList, observer) => {
 const observer = new MutationObserver(callback);
 
 // Start observing the target node for configured mutations
-observer.observe(targetNode, config);
+observer.observe(headerNode, config);
+observer.observe(navNode, config);
 
 if (window.localStorage.getItem('darkmode') == 'TRUE') {
     let element = document.querySelector("body");
