@@ -342,4 +342,20 @@ main #account .user-info-item {
   color: white;
 }
 
+#login {
+  width: 90%;
+  margin: 0 5%;
+}
+#login #login-form-wrapper #login-form {
+  border-radius: 5px;
+  margin-top: 15vh;
+}
+#login #login-form-wrapper #login-form #login-form-submit {
+  width: 35%;
+}
+#login #login-form-wrapper #login-form ::placeholder {
+  color: grey;
+  opacity: 0.6;
+}
+
 /*# sourceMappingURL=style.css.map */
