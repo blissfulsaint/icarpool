@@ -28,4 +28,6 @@ export async function loadHeaderFooter() {
     const footerElement = document.querySelector('footer');
 
     renderWithTemplate(footerTemplate, footerElement);
+
+    return Promise.resolve();
 }
