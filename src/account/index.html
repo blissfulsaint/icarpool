@@ -6,20 +6,24 @@
     <title>Account Home</title>
     <script defer src="../scripts/main.js" type="module"></script>
     <link rel="stylesheet" href="../css/style.css">
-    <script defer src="../scripts/account.js"></script>
+    <script defer src="../scripts/account.js" type="module"></script>
 </head>
 <body>
     <header></header>
     <nav></nav>
     <main>
+
         <div id="account">
-            <img class="profile-img" src="../public/images/placeholder.png" alt="profile-img">
+        <h2>Profile</h2>
+            <img class="profile-img" src="../public/images/placeholder.png">
             <div id="user-info">
-                <p class="user-info-item">Name: <span>Logan Huston</span></p>
-                <p class="user-info-item">Email:<span>huston@gmail.com</span></p>
+                <p class="user-info-item">Name: <br><span>Logan Huston</span></p>
+                <p class="user-info-item">Email: <br><span>logan@gmail.com</span></p>
             </div>
-            <button id="logoutBtn">Logout</button>
         </div>
+
+        <button id="logoutBtn">Logout</button>
+
     </main>
     <footer></footer>
 </body>

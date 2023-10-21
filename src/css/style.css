@@ -338,20 +338,8 @@ main #account #user-info {
 main #account .user-info-item {
   min-width: 125px;
 }
-main #account button {
-  margin: 1.5em 0;
-  width: 15em;
-  height: 2em;
-  border: none;
-  color: white;
-  background-color: #005089;
-  border-radius: 5px;
-}
 .dark main {
   color: white;
-}
-.dark .card {
-  box-shadow: 0 0 1em gray;
 }
 
 /*# sourceMappingURL=style.css.map */
