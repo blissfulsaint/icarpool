@@ -11,10 +11,17 @@ form{
 
         div {
             display: grid;
-            grid-template-columns: 5em 1fr;
+            grid-template-columns: 4em 1fr;
             margin-top: 1em;
+            padding-left: 1em;
             input{
                 border: none;
+            }
+        }
+        
+        .to {
+            label {
+                padding-left: 1.3em;
             }
         }
 
