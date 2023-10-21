@@ -1,1 +1,22 @@
 @import "../composition/theme";
+
+footer {
+    background-color: $secondary-color;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    a {
+        margin: auto .5em;
+    }
+
+    img {
+
+    }
+    
+    p {
+        color: white;
+        margin: auto 0;
+    }
+}
