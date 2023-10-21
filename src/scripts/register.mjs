@@ -17,12 +17,24 @@ registerButton.addEventListener("click", (e) => {
         username: null
     };
 
-    // Retrieve existing data from local storage (if any)
-    const existingData = JSON.parse(localStorage.getItem('users')) || { users: [] };
-
-    // Add the new user to the 'users' array
-    existingData.users.push(newUser);
-
-    // Store the updated data back in local storage
-    localStorage.setItem('users', JSON.stringify(existingData));
+    fetch('http://localhost:3000/users', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(newUser),
+    })
+        .then(response => response.json())
+        .then(data => {
+            if (data && data.id) {
+                localStorage.setItem("isAuthenticated", true);
+                window.location.href = 'index.html';
+            } else {
+                console.log(data);
+            }
+            console.log(data);
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        })
 })

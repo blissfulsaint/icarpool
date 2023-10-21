@@ -59,6 +59,7 @@ export function addLoginModalFunctions() {
         }
     }
     const openModalBtn = document.getElementById("openModalBtn");
+    const accountBtn = document.getElementById("accountBtn");
 
     // // Function to handle modal opening
     // function openLoginModal() {
@@ -87,8 +88,10 @@ export function addLoginModalFunctions() {
     if (isAuthenticated) {
         // Hide the login button if the user is authenticated
         openModalBtn.style.display = "none";
+        accountBtn.style.display = "block";
     } else {
         openModalBtn.style.display = "block";
+        accountBtn.style.display = "none";
     }
 
     // Handle form submission
