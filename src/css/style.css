@@ -131,8 +131,9 @@ main {
 }
 main #post {
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
 }
 main .profile-img {
   border-radius: 50%;
@@ -142,6 +143,7 @@ main .card {
   width: 90%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
+  max-width: 25em;
 }
 main .card .post-user {
   border-top-left-radius: 10px;
@@ -176,11 +178,15 @@ form .flex-form {
 }
 form .flex-form div {
   display: grid;
-  grid-template-columns: 5em 1fr;
+  grid-template-columns: 4em 1fr;
   margin-top: 1em;
+  padding-left: 1em;
 }
 form .flex-form div input {
   border: none;
+}
+form .flex-form .to label {
+  padding-left: 1.3em;
 }
 form button {
   width: 15em;
