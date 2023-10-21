@@ -13,24 +13,46 @@
     <main>
         <section>
             <form id="searchForm">
-                <label for="date">Date:</label>
-                <input type="text" id="date">
-                <label for="start">Start:</label>
-                <input type="text" id="start">
-                <label for="end">End:</label>
-                <input type="text" id="end">
-                <button type="button" onclick="search()">Search</button>
+                <div class="flex-form">
+                    <div class="data">
+                        <label for="date">Date:</label>
+                        <input type="text" id="Date">
+                    </div>
+                    <div class="from">
+                        <label for="from">From:</label>
+                        <input type="text" id="From">
+                    </div>
+                    <div class="to">
+                        <label for="to">To:</label>
+                        <input type="text" id="To">
+                    </div>
+                </div>
+                <div class="button-center">
+                    <button type="button" onclick="search()">Search</button>
+                </div>
             </form>
         </section>
+        <div id="post">
+            <section class="card">
+                <div class="post-user">
+                    <img class="profile-img" src="./public/images/placeholder.png">
+                    <p>Logan<span>(Driver)</span></p>
+                </div>
+                <p>Date: <span>October 30th, 5:30 PM</span></p>
+                <p>Start: <span>Rexburg, ID</span></p>
+                <p>End: <span>Logan, UT</span></p>
+            </section>
+            <section class="card">
+                <div class="post-user">
+                    <img class="profile-img" src="./public/images/placeholder.png">
+                    <p>Logan<span>(Driver)</span></p>
+                </div>
+                <p>Date: <span>October 30th, 5:30 PM</span></p>
+                <p>Start: <span>Rexburg, ID</span></p>
+                <p>End: <span>Logan, UT</span></p>
+            </section>
+        </div>
         <section>
-            <div>
-                <img src="./public/images/placeholder.png">
-                <p>Logan<span>(Driver)</span></p>
-            </div>
-            <p>Date: <span>October 30th, 5:30 PM</span></p>
-            <p>Start: <span>Rexburg, ID</span></p>
-            <p>End: <span>Logan, UT</span></p>
-        </section>
     </main>
     <footer></footer>
 </body>
