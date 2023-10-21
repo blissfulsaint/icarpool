@@ -360,5 +360,12 @@ main #account .user-info-item {
   color: grey;
   opacity: 0.6;
 }
+#login #login-form-wrapper .underline-link {
+  color: rgb(66, 66, 255);
+}
+
+.dark #login .underline-link {
+  color: #FFC49B;
+}
 
 /*# sourceMappingURL=style.css.map */

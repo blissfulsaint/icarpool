@@ -20,5 +20,16 @@
                 opacity: 0.6;
             }
         }
+        .underline-link {
+            color: rgb(66, 66, 255);
+        }
+    }
+}
+
+.dark {
+    #login{
+        .underline-link{
+            color: $accent2;
+        }
     }
 }
