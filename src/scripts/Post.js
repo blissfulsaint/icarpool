@@ -1,11 +1,13 @@
 export default class Post {
-    constructor (name, type, date, time, start, end) {
+    constructor (name, type, date, time, start, end, elementId) {
         this.name = name;
         this.type = type;
         this.date = date;
         this.time = time;
         this.start = start;
         this.end = end;
+
+        this.elementId = elementId;
 
         this.init();
     }
@@ -33,6 +35,6 @@ export default class Post {
             <p>End: <span>${this.end}</span></p>
         </section>`;
 
-        document.getElementById("post").insertAdjacentHTML('beforeend', html);
+        document.getElementById(this.elementId).insertAdjacentHTML('beforeend', html);
     }
 }

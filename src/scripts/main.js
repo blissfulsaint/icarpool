@@ -15,7 +15,7 @@ async function fetchPostData() {
 
   posts.forEach(post => {
     const postUser = users.find(user => user.id === post.userId);
-    new Post(postUser.firstName, post.type, post.startDate, post.startTime, post.startLocation, post.endLocation);
+    new Post(postUser.firstName, post.type, post.startDate, post.startTime, post.startLocation, post.endLocation, "post");
   })
 }
 
