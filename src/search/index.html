@@ -61,17 +61,19 @@
 
         console.log(queryParams);
 
-        let userResponse = await fetch('https://icarpool-api.onrender.com/users');
-        let users = await userResponse.json();
+        async function fetchData() {
+            let userResponse = await fetch('https://icarpool-api.onrender.com/users');
+            let users = await userResponse.json();
 
-        queryParams.forEach((value, key) => {
-            const post = JSON.parse(value);
-            console.log(post);
+            queryParams.forEach((value, key) => {
+                const post = JSON.parse(value);
+                console.log(post);
 
-            const postUser = users.find(user => user.id === post.userId);
-            new Post(postUser.firstName, post.type, post.startDate, post.startTime, post.startLocation, post.endLocation, "searchPost");
-        })
-
+                const postUser = users.find(user => user.id === post.userId);
+                new Post(postUser.firstName, post.type, post.startDate, post.startTime, post.startLocation, post.endLocation, "searchPost");
+            })
+        }
+        fetchData();
 
     </script>
 </body>

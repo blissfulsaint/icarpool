@@ -1,10 +1,13 @@
 @import "../composition/theme";
 
 main {
-    flex: 1;
+
+    @media screen and (min-width: 600px) {
+        flex: 1;
+    }
     transition: .2s;
     // background-color: $accent1;
-    #post {
+    #post, #searchPost {
         display: flex;
         justify-content: center;
         gap: 2em;
@@ -42,6 +45,12 @@ main {
     .profile-img{
         width: 2em;
         margin: 0.5em;
+    }
+
+    #searchForm {
+        .date {
+            display: none;
+        }
     }
 }
 

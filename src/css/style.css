@@ -54,7 +54,7 @@ header i.material-icons:hover {
 
 nav {
   background-color: #005089;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   width: 100%;
 }
@@ -126,10 +126,14 @@ footer p {
 }
 
 main {
-  flex: 1;
   transition: 0.2s;
 }
-main #post {
+@media screen and (min-width: 600px) {
+  main {
+    flex: 1;
+  }
+}
+main #post, main #searchPost {
   display: flex;
   justify-content: center;
   gap: 2em;
@@ -148,7 +152,7 @@ main .card {
 main .card .post-user {
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-  background-color: #FFEFD3;
+  background-color: #ffd080;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -160,6 +164,9 @@ main .card .post-user ~ p {
 main .profile-img {
   width: 2em;
   margin: 0.5em;
+}
+main #searchForm .date {
+  display: none;
 }
 
 .dark main {
@@ -265,8 +272,11 @@ body {
   height: 100vh;
 }
 body .underline-link {
-  color: #FFEFD3;
+  color: #ffd080;
   text-decoration: none;
+  display: block;
+  margin: 2em auto;
+  width: fit-content;
 }
 body .underline-link:hover {
   text-decoration: underline;
@@ -338,8 +348,20 @@ main #account #user-info {
 main #account .user-info-item {
   min-width: 125px;
 }
+main #account button {
+  margin: 1.5em 0;
+  width: 15em;
+  height: 2em;
+  border: none;
+  color: white;
+  background-color: #005089;
+  border-radius: 5px;
+}
 .dark main {
   color: white;
+}
+.dark .card {
+  box-shadow: 0 0 1em gray;
 }
 
 #login {
