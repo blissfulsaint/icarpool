@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Posting</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="../scripts/main.js" type="module"></script>
+    <script defer src="../scripts/newPost.mjs" type="module"></script>
+</head>
+<body>
+    <header></header>
+    <nav></nav>
+    <main>
+        <form id="post-form">
+            <input type="text" name="type" id="type" class="post-form-field" placeholder="Are you a driver or a rider?">
+            <input type="text" name="startLocation" id="startLocation" class="post-form-field" placeholder="Start Location">
+            <input type="text" name="endLocation" id="endLocation" class="post-form-field" placeholder="End Location">
+            <input type="date" name="startDate" id="startDate" class="post-form-field">
+            <input type="time" name="startTime" id="startTime" class="post-form-field">
+            <input type="number" name="seatsAvailable" id="seatsAvailable" class="post-form-field">
+            <input type="submit" value="Post" id="post-form-submit">
+        </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

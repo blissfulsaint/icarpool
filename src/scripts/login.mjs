@@ -58,6 +58,7 @@ loginButton.addEventListener("click", async (e) => {
 
     if (authenticatedUser) {
         localStorage.setItem("isAuthenticated", true);
+        localStorage.setItem("userId", authenticatedUser.id);
         window.location.href = "../account/index.html";
     } else {
         loginErrorMsg.style.opacity = 1;

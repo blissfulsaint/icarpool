@@ -28,6 +28,7 @@ registerButton.addEventListener("click", (e) => {
         .then(response => response.json())
         .then(data => {
             if (data && data.id) {
+                localStorage.setItem("userId", data.id);
                 localStorage.setItem("isAuthenticated", true);
                 window.location.href = 'index.html';
             } else {

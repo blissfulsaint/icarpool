@@ -12,6 +12,8 @@ export default defineConfig({
         account: resolve(__dirname, 'src/account/index.html'),
         login: resolve(__dirname, 'src/account/login.html'),
         register: resolve(__dirname, 'src/account/register.html'),
+        search: resolve(__dirname, 'src/search/index.html'),
+        posts: resolve(__dirname, 'src/posts/index.html'),
       },
     },
   },
